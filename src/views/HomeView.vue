@@ -87,7 +87,6 @@ function handleClose () {
 }
 
 function dateFormat (value) {
-  console.log(value)
   return moment(value).format('MMM Do, YYYY')
 }
 </script>
