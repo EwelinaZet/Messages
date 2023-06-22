@@ -3,6 +3,7 @@ import { ref, reactive, computed, onMounted } from "vue";
 import { useStore } from "@/stores/index";
 import BasePagination from "@/components/BasePagination.vue";
 import PopUp from "@/components/PopUp.vue";
+import moment from 'moment'
 
 const store = useStore();
 
@@ -84,6 +85,11 @@ function handleShowMessage (value) {
 function handleClose () {
   return isVisible.value = false
 }
+
+function dateFormat (value) {
+  console.log(value)
+  return moment(value).format('MMM Do, YYYY')
+}
 </script>
 
 <template>
@@ -108,7 +114,7 @@ function handleClose () {
         <img src="@/assets/email.png" />
       </div>
       <div class="messages-table-title">{{ message.title }}</div>
-      <div class="messages-table-date">{{ message.date }}</div>
+      <div class="messages-table-date">{{ dateFormat(message.date) }}</div>
       <div class="messages-table-from">{{ message.email }}</div>
     </div>
   </div>
