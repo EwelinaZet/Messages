@@ -60,7 +60,7 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: var(--color-background);
+  background-image: linear-gradient(to right, rgb(197, 228, 238), rgb(26, 206, 238), rgb(5, 148, 231));
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
   font-family:'Roboto', sans-serif;
